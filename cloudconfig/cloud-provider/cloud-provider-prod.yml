@@ -16,12 +16,12 @@ spring:
            password: kxf20131125
            username: old-rabbit
             #连接git的路径
-           uri: https://github.com/old-rabbit/springcloud2.git
+           uri: https://github.com/old-rabbit/springcloud.git
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    username: root
     password: 123
     url: jdbc:mysql://localhost:3306/1906d?useUnicode=true&characterEncoding=utf-8
-    username: root
 mybatis:
   config-locations: classpath:mapping/confg.xml
   mapper-locations: classpath:mapping/mapper/*.xml

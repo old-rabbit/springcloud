@@ -16,8 +16,12 @@ spring:
            password: kxf20131125
            username: old-rabbit
             #连接git的路径
-           uri: https://github.com/old-rabbit/springcloud2.git
-         
+           uri: https://github.com/old-rabbit/springcloud.git
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html    
   data:
     solr:
       host: http://127.0.0.1:8083/solr
