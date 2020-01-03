@@ -1,0 +1,32 @@
+server:
+  port: 8096
+eureka:
+  client:
+    service-url:
+      #注册中心地址
+      defaultZone: http://localhost:8082/eureka
+spring:
+  application:
+    #服务在注册中心的名称 不同服务名称不能重复
+    name: cloud-provider
+  cloud:
+    config:
+      server:
+         git:
+           password: kxf20131125
+           username: old-rabbit
+            #连接git的路径
+           uri: https://github.com/old-rabbit/springcloud2.git
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123
+    url: jdbc:mysql://localhost:3306/1906d?useUnicode=true&characterEncoding=utf-8
+    username: root
+mybatis:
+  config-locations: classpath:mapping/confg.xml
+  mapper-locations: classpath:mapping/mapper/*.xml
+  type-aliases-package: com.jk.model  
+
+
+
+
