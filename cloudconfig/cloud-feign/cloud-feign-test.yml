@@ -3,20 +3,17 @@ server:
 eureka:
   client:
     service-url:
-      #注册中心地址
       defaultZone: http://localhost:8082/eureka
 spring:
   application:
-    #服务在注册中心的名称 不同服务名称不能重复
     name: cloud-feign
   cloud:
     config:
       server:
-         git:
-           password: kxf20131125
-           username: old-rabbit
-            #连接git的路径
-           uri: https://github.com/old-rabbit/springcloud.git
+        git:
+          password: kxf20131125
+          username: old-rabbit
+          uri: https://github.com/old-rabbit/springcloud.git
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
@@ -25,7 +22,6 @@ spring:
   data:
     solr:
       host: http://127.0.0.1:8083/solr
-#开启熔断器配置
 feign:
   hystrix:
     enabled: true
